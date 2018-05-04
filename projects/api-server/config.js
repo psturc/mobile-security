@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const keycloakConfigPath = process.env.KEYCLOAK_CONFIG_PATH || '/etc/secrets/keycloak/bearer_installation';
+const keycloakConfigPath = process.env.KEYCLOAK_CONFIG_PATH || '/etc/secrets/keycloak/config';
 
 const config = {
   environment: process.env.NODE_ENV || 'dev',
@@ -8,7 +8,7 @@ const config = {
     port: process.env.PORT || 8080
   },
   mongo: {
-    url: process.env.MONGO_DB_URI || 'mongodb://localhost/secure-backend'
+    url: process.env.MONGO_DB_URI || 'mongodb://secure-app:admin@mongodb/secure-app'
   }
 };
 
